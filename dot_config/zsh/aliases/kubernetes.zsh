@@ -11,3 +11,6 @@ alias kctx='kubectx'
 
 # FluxCD
 alias fx='flux'
+alias fxe='flux events'
+alias fxg='flux get'
+alias fxd='flux describe'

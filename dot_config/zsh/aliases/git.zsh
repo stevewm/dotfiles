@@ -5,6 +5,7 @@ alias gst='gs'  # unlearn using `gst`
 alias gb='git branch'
 alias gc='git commit'
 alias gco='git checkout'
+alias gcl='git clone'
 alias gpl='git pull'
 alias gph='git push'
 alias gundo='git reset --soft HEAD^'

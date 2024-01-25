@@ -7,6 +7,7 @@
 export PROJECTS=$HOME/Repositories
 export CLICOLOR='1'
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/bin:$ZDOTDIR/bin:$PATH"
+export EDITOR=vim
 # TODO: Add support for sensitive env vars
 
 
