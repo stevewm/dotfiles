@@ -2,7 +2,7 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 
 [user]
-	name = {{ $ username }}
+	name = {{ $username }}
 	email = {{ $email | quote }}
 [init]
 	defaultBranch = main

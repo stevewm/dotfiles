@@ -1,6 +1,6 @@
 if status is-interactive
     {{- if lookPath "/opt/homebrew/bin/brew" }}
-    eval (/opt/homebrew/bin/brew shellenv)
+        eval (/opt/homebrew/bin/brew shellenv)
     {{- end }}
 
     if type -q direnv
@@ -14,9 +14,9 @@ if status is-interactive
     if type -q starship
         {{ lookPath "starship" }} init fish | source
     end
-end
 
-# Load aliases
-for file in $(ls ~/.config/fish/aliases)
-    source ~/.config/fish/aliases/$file
+    # Load aliases
+        for file in $(ls ~/.config/fish/aliases)
+        source ~/.config/fish/aliases/$file
+    end 
 end
