@@ -1,4 +1,4 @@
-# Terraform
+# terraform
 if type -q terraform
     abbr tf 'terraform'
     alias tfa 'terraform apply'

@@ -1,3 +1,4 @@
+# git
 if type -q git
     alias g {{ lookPath "git" }}
     alias ga 'git add'

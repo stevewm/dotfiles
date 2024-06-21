@@ -14,5 +14,9 @@ if status is-interactive
     if type -q starship
         {{ lookPath "starship" }} init fish | source
     end
+end
 
+# Load aliases
+for file in $(ls ~/.config/fish/aliases)
+    source ~/.config/fish/aliases/$file
 end

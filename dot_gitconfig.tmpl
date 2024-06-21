@@ -1,6 +1,9 @@
+{{- $username := promptStringOnce . "username" "Username" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
 [user]
-	name = stevewm
-	email = 34654219+duhio@users.noreply.github.com
+	name = {{ $ username }}
+	email = {{ $email | quote }}
 [init]
 	defaultBranch = main
 [color]
