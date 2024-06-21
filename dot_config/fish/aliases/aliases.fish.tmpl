@@ -1,0 +1,16 @@
+{{- if (eq .chezmoi.os "darwin") }}
+    alias dl 'cd ~/Downloads'
+    alias dt 'cd ~/Desktop'
+{{- end }}
+
+if type -q chezmoi
+    alias cm {{ lookPath "chezmoi" }}
+end
+
+if type -q lsd
+    alias ls {{ lookPath "lsd" }}
+end
+
+if type -q thefuck
+    alias f {{ lookPath "thefuck" }}
+end

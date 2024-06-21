@@ -1,1 +1,0 @@
-source $ZDOTDIR/plugins/LS_COLORS/lscolors.sh

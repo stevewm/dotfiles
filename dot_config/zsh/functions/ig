@@ -1,7 +1,0 @@
-#!/bin/sh
-
-ig() { 
-  /opt/homebrew/bin/convert -background white -gravity \
-   center "$1" -resize 1080x1080 -extent 1080x1080 \
-    ./$1-IG.jpg 
-    }
