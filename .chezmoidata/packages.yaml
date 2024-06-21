@@ -1,0 +1,7 @@
+packages:
+  darwin:
+    brews:
+    - git
+    - coreutils
+    casks:
+     - firefox
