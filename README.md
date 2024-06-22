@@ -12,5 +12,5 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply stevewm
 
 - [ ] OS-specific config
 - [ ] Work config
-- [ ] Setup scripts
+- [X] Setup scripts
 - [ ] Secrets
