@@ -1,6 +1,7 @@
 packages:
   darwin:
     brews:
+    - bitwarden-cli
     - chezmoi
     - coreutils
     - direnv
