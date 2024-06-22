@@ -1,6 +1,6 @@
 # git
 if type -q git
-    alias g {{ lookPath "git" }}
+    alias g 'git'
     alias ga 'git add'
     alias gs 'git status'
     alias gc 'git commit'

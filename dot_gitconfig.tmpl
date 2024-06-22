@@ -1,9 +1,6 @@
-{{- $username := promptStringOnce . "username" "Username" -}}
-{{- $email := promptStringOnce . "email" "Email address" -}}
-
 [user]
-	name = {{ $username }}
-	email = {{ $email | quote }}
+	name = {{ .name }}
+	email = {{ .email | quote }}
 [init]
 	defaultBranch = main
 [color]

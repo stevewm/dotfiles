@@ -1,0 +1,18 @@
+packages:
+  darwin:
+    brews:
+    - git
+    - coreutils
+    - neofetch
+    casks:
+    - firefox
+    - bartender
+    - caffeine
+    - firefox
+    - google-chrome
+    - iterm2
+    - keymapp
+    - rar
+    - rectangle
+    - spotify
+    - visual-studio-code

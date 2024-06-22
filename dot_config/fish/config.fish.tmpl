@@ -15,6 +15,12 @@ if status is-interactive
         {{ lookPath "starship" }} init fish | source
     end
 
+# Set greeting to neofetch
+    function fish_greeting
+        neofetch
+    end
+end
+
     # Load aliases
         for file in $(ls ~/.config/fish/aliases)
         source ~/.config/fish/aliases/$file
