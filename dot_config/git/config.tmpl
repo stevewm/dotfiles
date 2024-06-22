@@ -1,15 +1,27 @@
+[core]
+	excludesfile = "~/.config/git/ignore"
+
+[help]
+	autocorrect = 1
+
 [user]
 	name = {{ .name }}
 	email = {{ .email | quote }}
+
 [init]
 	defaultBranch = main
+
 [color]
 	ui = auto
+
 [merge]
   ff = only
+
 [push]
 	autoSetupRemote = true
+
 [pull]
   rebase = true
+
 [url "ssh://git@github.com/"]
   pushInsteadOf = https://github.com/
