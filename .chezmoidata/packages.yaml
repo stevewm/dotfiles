@@ -1,11 +1,17 @@
 packages:
   darwin:
     brews:
-    - git
+    - chezmoi
     - coreutils
+    - direnv
+    - fish
+    - git
+    - go-task
+    - jq
     - neofetch
+    - thefuck
+    - yq
     casks:
-    - firefox
     - bartender
     - caffeine
     - firefox
