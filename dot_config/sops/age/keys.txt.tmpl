@@ -1,0 +1,3 @@
+{{- if eq .personal "true" }}
+    {{ (bitwarden "item" "sops").notes }}
+{{- end }}
