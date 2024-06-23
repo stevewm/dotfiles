@@ -19,8 +19,16 @@
 {{-   $email = promptString "email" $email -}}
 {{- end -}}
 
+{{- /* is it a personal device? */ -}}
+{{- $personal := "true" -}}
+{{- if hasKey . "personal" -}}
+{{-   $personal = .personal -}}
+{{- else if $interactive -}}
+{{-   $personal = promptString "personal device" $personal -}}
+{{- end -}}
+
 {{- if $interactive -}}
-{{-   writeToStdout "💡 Tip: you can re-enter your name and email with `chezmoi init --data=false`.\n" -}}
+{{-   writeToStdout "💡 Tip: you can re-enter the info with `chezmoi init --data=false`.\n" -}}
 {{- end -}}
 
 sourceDir: "{{ .chezmoi.sourceDir }}"
@@ -28,3 +36,4 @@ sourceDir: "{{ .chezmoi.sourceDir }}"
 data:
   name: "{{ $name }}"
   email: "{{ $email }}"
+  personal: "{{ $personal }}"
