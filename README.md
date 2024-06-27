@@ -2,10 +2,13 @@
 
 These are my dotfiles. There are many like them, but these are mine.
 
+> [!CAUTION]
+> The install will overwrite your existing `fish` config!
+
 Run this dodgy one-liner to install chezmoi and apply my config:
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply stevewm
+export BW_SESSION=$(bw login --raw); sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply stevewm
 ```
 
 ## todo

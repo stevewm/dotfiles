@@ -14,7 +14,7 @@ truncate_to_repo = false
 [kubernetes]
 format = '[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
 disabled = false
-detect_folders=['Repositories']
+detect_folders=['~/Repositories']
 
 [fill]
 symbol = ' '

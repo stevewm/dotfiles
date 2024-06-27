@@ -21,7 +21,5 @@ if status is-interactive
     end
 end
 
-    # Load aliases
-        for file in $(ls ~/.config/fish/aliases)
-        source ~/.config/fish/aliases/$file
-    end
+# Load aliases
+source $XDG_CONFIG_HOME/fish/aliases/*.fish

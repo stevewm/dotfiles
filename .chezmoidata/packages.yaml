@@ -5,11 +5,17 @@ packages:
     - chezmoi
     - coreutils
     - direnv
+    - dog
+    - dust
     - fish
+    - fzf
     - git
     - go-task
     - jq
+    - lsd
     - neofetch
+    #- knqyf263/pet/pet
+    - starship
     - thefuck
     - yq
     casks:
