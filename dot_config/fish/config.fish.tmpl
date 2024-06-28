@@ -22,4 +22,6 @@ if status is-interactive
 end
 
 # Load aliases
-source $XDG_CONFIG_HOME/fish/aliases/*.fish
+for file in (find $XDG_CONFIG_HOME/fish/aliases/*.fish)
+    source $file
+end
