@@ -1,16 +1,19 @@
 packages:
   darwin:
     brews:
+    - bat
     - bitwarden-cli
     - chezmoi
     - coreutils
     - direnv
     - dog
     - dust
+    - fd
     - fish
     - fzf
     - git
     - go-task
+    - gum
     - jq
     - lsd
     - neofetch
