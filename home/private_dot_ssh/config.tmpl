@@ -1,0 +1,13 @@
+HashKnownHosts no
+
+{{- if eq .chezmoi.os "darwin" }}
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+{{- end }}
+
+Host github.com
+  User git
+{{- if .work }}
+  ProxyCommand {{- lookPath "corkscrew" -}} {{- keepassxcAttribute "Proxy" "host" -}} {{- keepassxcAttribute "Proxy" "port" -}} %h %p ~/.ssh/proxy_auth
+{{- end }}

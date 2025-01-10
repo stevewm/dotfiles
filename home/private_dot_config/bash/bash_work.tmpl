@@ -1,0 +1,33 @@
+NO_PROXY={{ keepassxcAttribute "Proxy" "no_proxy" | quote }}
+no_proxy="$no_proxy"
+
+urlEncode() {
+  [[ "${1}" ]] || return 1
+  local LANG=C i x
+  for (( i = 0; i < ${#1}; i++)); do
+    x="${1:i:1}"
+    [[ "${x}" == [a-zA-Z0-9.~_-] ]] && echo -n "${x}" || printf '%%%02X "''${x}"
+}
+
+setProxy() {
+  local PROXY_USER="$USER"
+  local PROXY_PASSWORD=''
+  local PROXY_HOST='{{- keepassxcAttribute "Proxy" "host" -}}:{{- keepassxcAttribute "Proxy" "port" }}'
+
+  stty -echo
+  printf "Password: "
+  read -r PROXY_PASSWORD
+  stty echo
+
+  export http_proxy="http://$PROXY_USER:$(urlEncode "$PROXY_PASSWORD")@$PROXY_HOST"
+  export HTTP_PROXY="$http_proxy"
+  export https_proxy="$http_proxy"
+  export HTTPS_PROXY="$http_proxy"
+  export ftp_proxy="$http_proxy"
+  export FTP_PROXY="$http_proxy"
+  export PROXY_PASSWORD=''
+}
+
+export GITHUB_TOKEN={{ keepassxcAttribute "GitHub" "token" | quote }}
+
+eval "$(starship init bash)"

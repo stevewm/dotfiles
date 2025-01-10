@@ -1,0 +1,32 @@
+[core]
+	excludesfile = "$XDG_CONFIG_HOME/git/ignore"
+
+[help]
+	autocorrect = 1
+
+[user]
+{{ if .personal }}
+	name = stevewm
+	email = {{ .email }}
+{{ else if .work }}
+    name = {{ keepassxcAttribute "GitHub" "username" }}
+    email = {{ .email }}
+{{ end }}
+
+[init]
+	defaultBranch = main
+
+[color]
+	ui = auto
+
+[merge]
+  ff = only
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+    rebase = true
+
+[url "ssh://git@github.com/"]
+    pushInsteadOf = https://github.com/

@@ -1,0 +1,50 @@
+packages:
+  darwin:
+    brews:
+    - bat
+    - bitwarden-cli
+    - chezmoi
+    - coreutils
+    - direnv
+    - dockutil
+    - dog
+    - dust
+    - fd
+    - fish
+    - fzf
+    - git
+    - go-task
+    - gum
+    - jq
+    - lsd
+    - neofetch
+    - starship
+    - thefuck
+    - yq
+    casks:
+    - bartender
+    - caffeine
+    - firefox
+    - google-chrome
+    - iterm2
+    - keymapp
+    - rar
+    - rectangle
+    - spotify
+    - visual-studio-code
+  linux:
+    work:
+      yum:
+        - bash-completion
+        - code
+        - ruby
+        - terraform
+      cadenv:
+        - git
+        - go=1.22.5
+        - gradle
+        - keepassxc
+        - kubectl
+        - python3
+        - shellcheck
+    personal: []

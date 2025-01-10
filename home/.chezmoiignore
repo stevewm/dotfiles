@@ -1,0 +1,18 @@
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.chezmoiscripts/linux/**
+{{ end }}
+
+{{ if .personal }}
+.config/bash/bash_work
+.ssh/proxy_auth
+{{ end }}
+
+{{/* no fish allowed at work :/ */}} 
+{{ if not .personal }}
+.config/fish
+.chezmoiscripts/**fish**
+{{ end }}

@@ -1,0 +1,31 @@
+{{ if lookPath "kubectl" }}
+# kubectl
+if type -q kubectl
+{{ if lookPath "kubecolor" }}
+    alias kubectl 'kubecolor'
+{{ end }}
+    abbr -a 'kubectl='k'
+    alias kgp 'kubectl get po'
+    alias kdp 'kubectl describe po'
+    alias kg 'kubectl get'
+    alias kd 'kubectl describe'
+end
+{{ end }}
+
+{{ if lookPath "kubectx" }}
+# kubectx
+if type -q kubectx
+    abbr -a kctx='kubectx'
+    abbr -a kns='kubens'
+end
+{{ end }}
+
+{{ if lookPath "flux" }}
+# fluxcd
+if type -q flux
+    alias fx='flux'
+    alias fxe='flux events'
+    alias fxg='flux get'
+    alias fxd='flux describe'
+end
+{{ end }}

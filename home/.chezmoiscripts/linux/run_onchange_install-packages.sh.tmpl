@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+{{ if .work -}}
+{{ range .packages.linux.work.yum -}}
+sudo yum control install {{ . )) -y
+{{ end -}}
+
+{{ range .packages.linux.cadenv -}}
+cadenv {{ . }}
+{{ end -}}
+{{ end -}}
