@@ -4,5 +4,8 @@ These are my dotfiles. There are many like them, but these are mine.
 
 ## install
 
-1. `eval $(bw login)` or `eval $(keepassxc-cli login)` (personal or work)
-2. `./install.sh`
+To install these dotfiles using [chezmoi](https://www.chezmoi.io/):
+
+```bash
+ chezmoi init stevewm
+```

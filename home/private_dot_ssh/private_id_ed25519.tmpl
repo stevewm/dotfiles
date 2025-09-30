@@ -1,5 +1,0 @@
-{{ if .personal }}
-{{ (bitwarden "item" "PrivateKeyED25519").notes }}
-{{ else if .work }}
-{{ keepassxcAttribute "SSH" "private_key_ed25519" }}
-{{ end }}
