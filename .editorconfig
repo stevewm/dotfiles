@@ -8,8 +8,8 @@ insert_final_newline = true
 
 [*.{tmpl,fish}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
-[*.{yaml,yml}]
+[*.{yaml,yml,yaml.tmpl,yml.tmpl}]
 indent_style = space
 indent_size = 2
