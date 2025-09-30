@@ -55,7 +55,3 @@ end
 if type -q pbpaste
     abbr pst pbpaste
 end
-
-if type -q zoxie
-    abbr z zoxide
-end
