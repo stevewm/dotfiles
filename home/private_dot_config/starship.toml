@@ -22,9 +22,8 @@ context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
 context_alias = "gke-$cluster"
 
 [[kubernetes.contexts]]
-context_pattern = "production"
+context_pattern = "prd"
 style = "bold red"
-
 
 [fill]
 symbol = ' '
