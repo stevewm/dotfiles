@@ -1,5 +1,7 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = true
-format = '''
+format = '''$kubernetes
 $directory$fill$git_branch$git_commit$git_status
 $username$hostname $status$character
 '''
@@ -14,7 +16,15 @@ truncate_to_repo = false
 [kubernetes]
 format = '[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
 disabled = false
-detect_folders=['~/Repositories']
+
+[[kubernetes.contexts]]
+context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
+context_alias = "gke-$cluster"
+
+[[kubernetes.contexts]]
+context_pattern = "production"
+style = "bold red"
+
 
 [fill]
 symbol = ' '
