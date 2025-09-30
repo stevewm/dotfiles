@@ -1,11 +1,11 @@
 # git abbreviations
 if type -q git
-    abbr --command git co checkout
-    abbr --command git pl pull --rebase --autostash
-    abbr --command git pf push --force
-    abbr --command git st status
-    abbr --command git sw switch
-    abbr --command git c commit
+    abbr git co checkout
+    abbr git pl pull --rebase --autostash
+    abbr git pf push --force
+    abbr git st status
+    abbr git sw switch
+    abbr git c commit
 end
 
 if type -q git
