@@ -5,6 +5,7 @@ if type -q git
     abbr --command git pf push --force
     abbr --command git st status
     abbr --command git sw switch
+    abbr --command git c commit
 end
 
 if type -q git
