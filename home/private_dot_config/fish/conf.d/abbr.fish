@@ -10,7 +10,7 @@ if type -q git
     abbr --command git st status
     abbr --command git sw switch
     abbr --command git br branch
-    abbr --command git c commit -m
+    abbr --command git c commit
     abbr --command git a add
 end
 
