@@ -1,0 +1,27 @@
+{{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
+{{- $work := false -}}{{/* true if this machine is a work machine */}}
+
+{{- $osID := .chezmoi.os -}}
+{{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
+{{-   $osID = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
+
+{{/* work around unreliable hostname on darwin */}}
+{{- $hostname := .chezmoi.hostname -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $hostname := output "scutil" "--get" "LocalHostName" | trim -}}
+{{- end -}}
+
+{{- if eq $hostname "Steves-MacBook-Pro" -}}
+{{-     $personal = true -}}
+{{- else if contains $hostname "seilvdi" -}}
+{{-   $work = true -}}
+{{- end -}}
+
+[data]
+    hostname = {{ $hostname | quote }}
+    work = {{ $work }}
+    personal = {{ $personal }}
+
+[github]
+    refreshPeriod = "12h"

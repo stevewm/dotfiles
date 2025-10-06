@@ -1,0 +1,52 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+format = '''$kubernetes
+$directory$fill$git_branch$git_commit$git_status
+$username$hostname $status$character
+'''
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red) '
+
+[directory]
+truncate_to_repo = false
+
+[kubernetes]
+format = '[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+disabled = false
+
+[[kubernetes.contexts]]
+context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
+context_alias = "gke-$cluster"
+
+[[kubernetes.contexts]]
+context_pattern = "prd"
+style = "bold red"
+
+[fill]
+symbol = ' '
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[hostname]
+ssh_only = false
+format = '[$hostname]($style)'
+style = 'dimmed white'
+disabled = false
+
+[package]
+disabled = true
+
+[status]
+format = '[$symbol$status]($style) '
+disabled = false
+symbol = '✗ '
+
+[username]
+format = '[$user@]($style)'
+style_root = 'bold dimmed red'
+style_user = 'dimmed white'
+show_always = true

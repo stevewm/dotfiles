@@ -1,0 +1,5 @@
+function s --wraps switcher --description "Kubernetes context switcher"
+    if type -q switcher
+        {{ lookPath "switcher" }} $argv
+    end
+end

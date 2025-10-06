@@ -1,0 +1,14 @@
+{{- if eq .chezmoi.os "darwin" -}}
+# MacOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+{{ end}}
+{{- if eq .chezmoi.os "windows" -}}
+# Windows
+Thumbs.db
+{{ end }}
+.crt
+.key

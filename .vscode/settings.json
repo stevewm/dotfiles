@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.tmpl": "go-template",
+        "*.fish": "fish"
+    }
+}

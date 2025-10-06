@@ -1,0 +1,64 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+    "bat"
+    "bitwarden-cli"
+    "chezmoi"
+    "dog"
+    "fd"
+    "jo"
+    "jq"
+    "lsd"
+    "mise"
+    "neofetch"
+    "rclone"
+    "rsync"
+    "starship"
+    "terraform"
+    "tree"
+    "yq"
+    "zoxide" -}}
+{{ $casks := list
+    "alacritty"
+    "firefox"
+    "font-caskaydia-cove-nerd-font"
+    "keymapp"
+    "visual-studio-code" -}}
+
+{{ if .personal -}}
+{{   $brews = concat $brews (list
+      "imagemagick"
+      "openjdk"
+      "yt-dlp") -}}
+{{   $casks = concat $casks (list
+      "adobe-creative-cloud"
+      "balenaetcher"
+      "boosteroid"
+      "caffeine"
+      "crossover"
+      "discord"
+      "firefox"
+      "minecraft"
+      "modrinth"
+      "obsidian"
+      "openmtp"
+      "qflipper"
+      "signal"
+      "signal"
+      "spotify"
+      "spotify"
+      "utm"
+      "vlc"
+      "whatsapp") -}}
+{{ end -}}
+
+brew bundle --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
