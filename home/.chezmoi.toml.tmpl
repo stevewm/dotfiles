@@ -12,7 +12,7 @@
 {{-   $hostname := output "scutil" "--get" "LocalHostName" | trim -}}
 {{- end -}}
 
-{{- if eq $hostname "Steves-MacBook-Pro" -}}
+{{- if eq $hostname "steves-MacBook-Pro" -}}
 {{-     $personal = true -}}
 {{- else if contains $hostname "seilvdi" -}}
 {{-   $work = true -}}

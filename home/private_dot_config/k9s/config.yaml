@@ -1,0 +1,7 @@
+---
+k9s:
+  defaultView: pods
+  noExitOnCtrlC: true
+  ui:
+    logoless: true
+    skin: catppuccin-mocha
