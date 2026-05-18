@@ -1,14 +1,11 @@
-# git abbreviations
 if type -q git
     abbr g git
-end
-
-if type -q git
     abbr --command git co checkout
     abbr --command git pl pull --rebase --autostash
     abbr --command git pf push --force
     abbr --command git st status
     abbr --command git sw switch
+    abbr --command git swc switch -c
     abbr --command git br branch
     abbr --command git c commit
     abbr --command git a add
