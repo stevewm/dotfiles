@@ -1,0 +1,31 @@
+" Automatically reload files when they are changed outside of Vim
+set autoread
+
+" Highlight search results
+set hlsearch
+
+" Show matching parentheses
+set showmatch
+
+" Silence the bell and visual bell
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" Syntax highlighting
+syntax on
+
+" Enable line numbers
+set number
+
+" Use spaces instead of tabs
+set expandtab
+set shiftwidth=4
+
+" Always show the status line
+set laststatus=2
+
+" Cursor line highlighting
+set cursorline
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

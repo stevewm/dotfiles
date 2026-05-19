@@ -11,7 +11,7 @@ success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red) '
 
 [directory]
-truncate_to_repo = false
+truncate_to_repo = true
 
 [kubernetes]
 format = '[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
