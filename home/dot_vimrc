@@ -1,8 +1,17 @@
+" Indent two spaces for YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " Automatically reload files when they are changed outside of Vim
 set autoread
 
 " Highlight search results
 set hlsearch
+" Incremental search
+set incsearch
+" Ignore case in search patterns
+set ignorecase
+" Override ignorecase if the search pattern contains uppercase letters
+set smartcase
 
 " Show matching parentheses
 set showmatch
@@ -27,5 +36,4 @@ set laststatus=2
 
 " Cursor line highlighting
 set cursorline
-
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+set cursorcolumn
